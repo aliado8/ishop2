@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/adminlte/">
-    <title>AdminLTE 3 | Dashboard</title>
-
+    <?=$this->getMeta()?>
+    <link rel="shortcut icon" href="/images/star.png" type="image/png" />
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -340,8 +340,8 @@
 <!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!--<script src="plugins/jqvmap/jquery.vmap.min.js"></script>-->
+<!--<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>-->
 <!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -359,5 +359,11 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<?
+$logs = \R::getDatabaseAdapter()->getDatabase()->getLogger();
+
+debug($logs->grep('SELECT'));
+
+?>
 </body>
 </html>
