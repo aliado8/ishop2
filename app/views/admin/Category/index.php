@@ -4,7 +4,7 @@
         Список категорий
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a><ion-icon name="close-outline"></ion-icon></li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active">Список категорий<i class="fa fa-fw fa-close text-danger"></i></li>
     </ol>
 </section>
