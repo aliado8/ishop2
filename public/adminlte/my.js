@@ -101,7 +101,9 @@ if(buttonSingle) {
             }, 1000);
         }
     });
+}
 
+if(buttonMulti){
     new AjaxUpload(buttonMulti, {
         action: adminpath + buttonMulti.data('url') + "?upload=1",
         data: {name: buttonMulti.data('name')},
@@ -123,4 +125,15 @@ if(buttonSingle) {
             }, 1000);
         }
     });
+}
+
+$('#add').on('submit', function(){
+    if(!isNumeric( $('#category_id').val() )){
+        alert('Выберите категорию');
+        return false;
+    }
+});
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
 }
